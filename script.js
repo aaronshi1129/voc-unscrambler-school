@@ -139,7 +139,7 @@ function checkGuess() {
     .toLowerCase();
 
   if (userGuess === currentWord.toLowerCase()) {
-    messageDisplay.textContent = 'Correct!';
+    messageDisplay.textContent = '👍Correct!👌';
     messageDisplay.classList.add('animate__animated', 'animate__bounce');
     score++;
     scoreDisplay.textContent = `Score: ${score}`;
@@ -151,7 +151,7 @@ function checkGuess() {
     if (score >= 10) {
       const minutes = Math.floor(timeLeft / 60);
       const seconds = timeLeft % 60;
-      const finalTimeMessage = `Congratulations! You won the game in ${String(minutes).padStart(2, '0')} minutes and ${String(seconds).padStart(2, '0')} seconds!`;
+      const finalTimeMessage = `🎊Congratulations!🎉 You successfully unscrambled 10 words in ${String(minutes).padStart(2, '0')} minutes and ${String(seconds).padStart(2, '0')} seconds!🏅`;
 
       finalMessageDisplay.textContent = finalTimeMessage;
       finalCongratulationsDisplay.style.display = 'block';
@@ -174,7 +174,7 @@ function checkGuess() {
       selectedLetters = [];
     }
   } else {
-    messageDisplay.textContent = 'Incorrect. Try again.';
+    messageDisplay.textContent = '😥Incorrect. Try again.💪';
     messageDisplay.classList.add('animate__animated', 'animate__shakeX');
 
     setTimeout(() => {
